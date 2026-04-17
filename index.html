@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CaptionCraft – AI Instagram Caption Generator | Free & Pro</title>
+  <meta name="description" content="Generate 5 stunning, viral Instagram captions in seconds with AI. Pick your niche, choose your tone, copy and post. Free forever." />
+  <meta name="keywords" content="instagram caption generator, ai caption generator, free caption tool, instagram marketing, social media captions, content creator tools" />
+  <meta name="author" content="CaptionCraft" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#07070f" />
+
+  <meta property="og:title" content="CaptionCraft – AI Instagram Caption Generator" />
+  <meta property="og:description" content="5 AI-powered captions in seconds. Free forever. No sign-up needed." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://captioncraft.app" />
+  <meta property="og:image" content="https://captioncraft.app/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CaptionCraft – AI Instagram Caption Generator" />
+  <meta name="twitter:description" content="Generate viral Instagram captions in seconds with AI." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       TOAST NOTIFICATION (injected by JS)
+  ══════════════════════════════════════════ -->
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo" aria-label="CaptionCraft home">
+        <span class="logo-icon">✦</span>Caption<span class="logo-accent">Craft</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#generator" class="nav-link">Generator</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#pricing" class="nav-cta-btn">Get Pro <span>→</span></a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav drawer -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+      <a href="#generator" class="mobile-nav-link">Generator</a>
+      <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+      <a href="#pricing" class="mobile-nav-link">Pricing</a>
+      <a href="#pricing" class="mobile-nav-cta">Get Pro →</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <section class="hero">
+    <!-- Background orbs -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        GPT-4o Powered · Free to Start
+      </div>
+
+      <h1 class="hero-title reveal reveal-delay-1">
+        Stop Writing Captions.<br />
+        <span class="title-gradient">Start Going Viral.</span>
+      </h1>
+
+      <p class="hero-sub reveal reveal-delay-2">
+        Get 5 scroll-stopping Instagram captions tailored to your niche and tone
+        in under 5 seconds — no sign-up, no credit card.
+      </p>
+
+      <a href="#generator" class="hero-cta reveal reveal-delay-3">
+        <span>Generate Free Captions</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <!-- Social proof bar -->
+      <div class="social-proof reveal reveal-delay-4">
+        <div class="proof-avatars" aria-hidden="true">
+          <div class="avatar av1">S</div>
+          <div class="avatar av2">M</div>
+          <div class="avatar av3">P</div>
+          <div class="avatar av4">J</div>
+          <div class="avatar av5">K</div>
+        </div>
+        <div class="proof-text">
+          <div class="proof-stars" aria-label="5 star rating">★★★★★</div>
+          <span>Loved by <strong>8,200+</strong> creators</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating stats strip -->
+    <div class="stats-strip reveal reveal-delay-4">
+      <div class="stat-item">
+        <strong>50K+</strong>
+        <span>Captions Generated</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <strong>8,200+</strong>
+        <span>Happy Creators</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <strong>4.9 / 5</strong>
+        <span>Average Rating</span>
+      </div>
+      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-item">
+        <strong>&lt; 5s</strong>
+        <span>Generation Time</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       GENERATOR
+  ══════════════════════════════════════════ -->
+  <section class="generator-section" id="generator">
+    <div class="generator-wrap">
+
+      <!-- Left: Form panel -->
+      <div class="gen-panel gen-form-panel reveal">
+        <div class="panel-header">
+          <span class="panel-chip">AI Generator</span>
+          <h2>Create Your Captions</h2>
+          <p>Describe your post, pick a vibe, and let AI handle the rest.</p>
+        </div>
+
+        <!-- Step 1: Niche -->
+        <div class="form-step">
+          <div class="step-label">
+            <span class="step-num">1</span>
+            <span>What's your post about?</span>
+          </div>
+          <div class="input-wrap">
+            <input
+              type="text"
+              id="niche"
+              placeholder="e.g. sunrise hike in Patagonia, launching my skincare brand..."
+              maxlength="150"
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+              aria-label="Describe your post topic"
+            />
+            <span class="char-badge" id="charCount">0</span>
+          </div>
+          <div class="input-hint">Be specific — better input = better captions</div>
+        </div>
+
+        <!-- Step 2: Tone pills -->
+        <div class="form-step">
+          <div class="step-label">
+            <span class="step-num">2</span>
+            <span>Choose your tone</span>
+          </div>
+          <div class="tone-grid" id="toneGrid" role="group" aria-label="Select caption tone">
+            <button type="button" class="tone-pill active" data-tone="motivational" aria-pressed="true">
+              <span class="pill-icon">🔥</span>
+              <span class="pill-label">Motivational</span>
+            </button>
+            <button type="button" class="tone-pill" data-tone="funny" aria-pressed="false">
+              <span class="pill-icon">😂</span>
+              <span class="pill-label">Funny</span>
+            </button>
+            <button type="button" class="tone-pill" data-tone="aesthetic" aria-pressed="false">
+              <span class="pill-icon">✨</span>
+              <span class="pill-label">Aesthetic</span>
+            </button>
+            <button type="button" class="tone-pill" data-tone="professional" aria-pressed="false">
+              <span class="pill-icon">💼</span>
+              <span class="pill-label">Professional</span>
+            </button>
+            <button type="button" class="tone-pill" data-tone="storytelling" aria-pressed="false">
+              <span class="pill-icon">📖</span>
+              <span class="pill-label">Storytelling</span>
+            </button>
+            <button type="button" class="tone-pill" data-tone="sales" aria-pressed="false">
+              <span class="pill-icon">💰</span>
+              <span class="pill-label">Sales</span>
+            </button>
+            <button type="button" class="tone-pill" data-tone="educational" aria-pressed="false">
+              <span class="pill-icon">📚</span>
+              <span class="pill-label">Educational</span>
+            </button>
+            <button type="button" class="tone-pill" data-tone="casual" aria-pressed="false">
+              <span class="pill-icon">😎</span>
+              <span class="pill-label">Casual</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3: Options row -->
+        <div class="form-step options-row">
+          <div class="step-label">
+            <span class="step-num">3</span>
+            <span>Options</span>
+          </div>
+          <div class="options-grid">
+            <label class="option-toggle">
+              <input type="checkbox" id="includeEmoji" checked />
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+              <span class="option-label">Emojis</span>
+            </label>
+            <label class="option-toggle">
+              <input type="checkbox" id="includeHashtags" checked />
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+              <span class="option-label">Hashtags</span>
+            </label>
+            <label class="option-toggle">
+              <input type="checkbox" id="includeCta" checked />
+              <span class="toggle-track"><span class="toggle-thumb"></span></span>
+              <span class="option-label">Call to Action</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Generate button -->
+        <button class="generate-btn" id="generateBtn" aria-label="Generate captions">
+          <span class="btn-content" id="btnContent">
+            <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            Generate 5 Captions
+          </span>
+          <span class="btn-loader" id="btnLoader" aria-hidden="true">
+            <span class="spinner"></span>
+            <span>Crafting your captions…</span>
+          </span>
+        </button>
+
+        <!-- Mobile sticky generate (fixed at bottom on phones) -->
+        <button class="generate-btn-sticky" id="generateBtnSticky" aria-label="Generate captions">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+          Generate Captions
+        </button>
+      </div>
+
+      <!-- Right: Output panel -->
+      <div class="gen-panel gen-output-panel" id="outputPanel">
+
+        <!-- Empty state (shown before generation) -->
+        <div class="output-empty" id="outputEmpty">
+          <div class="empty-illustration" aria-hidden="true">
+            <div class="empty-circle">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3>Your captions appear here</h3>
+          <p>Fill in your niche, pick a tone, and hit generate to see 5 AI-crafted captions ready to copy.</p>
+          <div class="empty-examples">
+            <span class="example-chip">✦ Fitness motivation</span>
+            <span class="example-chip">✦ Travel photography</span>
+            <span class="example-chip">✦ Small business launch</span>
+          </div>
+        </div>
+
+        <!-- Skeleton loader (shown while generating) -->
+        <div class="output-skeleton" id="outputSkeleton" aria-hidden="true" aria-label="Loading captions">
+          <div class="skeleton-header">
+            <div class="sk sk-title"></div>
+            <div class="sk sk-btn"></div>
+          </div>
+          <div class="skeleton-card"><div class="sk sk-num"></div><div class="sk-lines"><div class="sk sk-line"></div><div class="sk sk-line sk-line-short"></div><div class="sk sk-line"></div></div></div>
+          <div class="skeleton-card"><div class="sk sk-num"></div><div class="sk-lines"><div class="sk sk-line"></div><div class="sk sk-line sk-line-med"></div></div></div>
+          <div class="skeleton-card"><div class="sk sk-num"></div><div class="sk-lines"><div class="sk sk-line"></div><div class="sk sk-line"></div><div class="sk sk-line sk-line-short"></div></div></div>
+        </div>
+
+        <!-- Real output (shown after generation) -->
+        <div class="output-results" id="outputResults">
+          <div class="output-header">
+            <div class="output-title-row">
+              <h3 class="output-title">Your Captions</h3>
+              <div class="output-meta" id="outputMeta"></div>
+            </div>
+            <button class="copy-all-btn" id="copyAllBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              Copy All
+            </button>
+          </div>
+          <div class="captions-list" id="captionsList"></div>
+          <div class="output-footer">
+            <button class="regenerate-btn" id="regenerateBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M1 4v6h6M23 20v-6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M20.49 9A9 9 0 105.64 5.64L1 10M23 14l-4.64 4.36A9 9 0 013.51 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Regenerate
+            </button>
+            <span class="output-hint">Tip: Click any caption to expand it</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       HOW IT WORKS
+  ══════════════════════════════════════════ -->
+  <section class="how-section" id="how-it-works">
+    <div class="section-center">
+      <div class="section-eyebrow reveal">How It Works</div>
+      <h2 class="section-heading reveal reveal-delay-1">Three steps. Five captions.<br />Zero writer's block.</h2>
+    </div>
+
+    <div class="steps-track">
+      <div class="step-card reveal">
+        <div class="step-icon-wrap">
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="step-connector" aria-hidden="true"></div>
+        </div>
+        <div class="step-body">
+          <span class="step-badge">Step 01</span>
+          <h3>Describe Your Post</h3>
+          <p>Type a few words about your niche, product, or moment. The more specific, the better the caption.</p>
+        </div>
+      </div>
+
+      <div class="step-card reveal reveal-delay-1">
+        <div class="step-icon-wrap">
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="step-connector" aria-hidden="true"></div>
+        </div>
+        <div class="step-body">
+          <span class="step-badge">Step 02</span>
+          <h3>Pick Your Tone</h3>
+          <p>Choose from 8 tones — motivational, funny, aesthetic, sales, and more. Match your brand's voice perfectly.</p>
+        </div>
+      </div>
+
+      <div class="step-card reveal reveal-delay-2">
+        <div class="step-icon-wrap">
+          <div class="step-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="step-body">
+          <span class="step-badge">Step 03</span>
+          <h3>Copy &amp; Post</h3>
+          <p>Get 5 ready-to-use captions with hashtags. Copy your favorite in one tap and watch the engagement roll in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PRICING
+  ══════════════════════════════════════════ -->
+  <section class="pricing-section" id="pricing">
+    <div class="section-center">
+      <div class="section-eyebrow reveal">Pricing</div>
+      <h2 class="section-heading reveal reveal-delay-1">Start free.<br />Scale when you're ready.</h2>
+      <p class="section-sub reveal reveal-delay-2">No credit card required. Cancel anytime.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Free -->
+      <div class="pricing-card reveal">
+        <div class="plan-header">
+          <div class="plan-tier">Free</div>
+          <div class="plan-price-row">
+            <span class="plan-amount">$0</span>
+            <span class="plan-period">/ month</span>
+          </div>
+          <p class="plan-tagline">Perfect for trying the tool and getting started.</p>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="feat-yes"><span class="feat-icon">✓</span> 10 generations per day</li>
+          <li class="feat-yes"><span class="feat-icon">✓</span> All 8 caption tones</li>
+          <li class="feat-yes"><span class="feat-icon">✓</span> 5 captions per generation</li>
+          <li class="feat-yes"><span class="feat-icon">✓</span> One-click copy</li>
+          <li class="feat-no"><span class="feat-icon">✗</span> Hashtag bundles</li>
+          <li class="feat-no"><span class="feat-icon">✗</span> Caption history</li>
+          <li class="feat-no"><span class="feat-icon">✗</span> Custom brand voice</li>
+          <li class="feat-no"><span class="feat-icon">✗</span> Priority AI speed</li>
+        </ul>
+        <a href="#generator" class="plan-btn plan-btn-free">Start for Free →</a>
+      </div>
+
+      <!-- Pro -->
+      <div class="pricing-card pricing-card-pro reveal reveal-delay-1">
+        <div class="plan-popular-badge">Most Popular ✦</div>
+        <div class="plan-header">
+          <div class="plan-tier">Pro</div>
+          <div class="plan-price-row">
+            <span class="plan-amount">$9</span>
+            <span class="plan-period">/ month</span>
+          </div>
+          <p class="plan-tagline">For creators who post consistently and mean business.</p>
+        </div>
+        <div class="plan-divider"></div>
+        <ul class="plan-features">
+          <li class="feat-yes"><span class="feat-icon">✓</span> Unlimited generations</li>
+          <li class="feat-yes"><span class="feat-icon">✓</span> All 8 caption tones</li>
+          <li class="feat-yes"><span class="feat-icon">✓</span> 5 captions per generation</li>
+          <li class="feat-yes"><span class="feat-icon">✓</span> One-click copy</li>
+          <li class="feat-yes pro"><span class="feat-icon">✓</span> 30 targeted hashtags</li>
+          <li class="feat-yes pro"><span class="feat-icon">✓</span> Caption history (90 days)</li>
+          <li class="feat-yes pro"><span class="feat-icon">✓</span> Custom brand voice</li>
+          <li class="feat-yes pro"><span class="feat-icon">✓</span> Priority AI (2× faster)</li>
+        </ul>
+        <a href="#" class="plan-btn plan-btn-pro">Upgrade to Pro →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════════════════ -->
+  <section class="testimonials-section">
+    <div class="section-center">
+      <div class="section-eyebrow reveal">Wall of Love</div>
+      <h2 class="section-heading reveal reveal-delay-1">Creators are obsessed.</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>"I used to spend 30 minutes agonizing over captions. CaptionCraft takes 10 seconds and the results are honestly better than what I'd write myself."</p>
+        <div class="t-author">
+          <div class="t-avatar av1">S</div>
+          <div>
+            <strong>Sarah K.</strong>
+            <span>Fitness Influencer · 120K followers</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>"My engagement jumped 40% after I started using AI captions. The storytelling tone in particular is incredible — people actually comment on them."</p>
+        <div class="t-author">
+          <div class="t-avatar av2">M</div>
+          <div>
+            <strong>Marcus T.</strong>
+            <span>E-commerce Brand · 45K followers</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>"Finally a tool that gets my niche. The captions sound like ME — not some generic robot. I've recommended it to every creator I know."</p>
+        <div class="t-author">
+          <div class="t-avatar av3">P</div>
+          <div>
+            <strong>Priya R.</strong>
+            <span>Travel Blogger · 85K followers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FAQ ACCORDION
+  ══════════════════════════════════════════ -->
+  <section class="faq-section">
+    <div class="section-center">
+      <div class="section-eyebrow reveal">FAQ</div>
+      <h2 class="section-heading reveal reveal-delay-1">Common questions.</h2>
+    </div>
+    <div class="faq-list reveal" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is CaptionCraft really free?</button>
+        <div class="faq-a"><p>Yes — the Free plan gives you 10 full generations per day, forever. No credit card required. Upgrade to Pro only if you need more volume or advanced features.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How does the AI generate captions?</button>
+        <div class="faq-a"><p>We use OpenAI's GPT-4o model with a carefully crafted prompt system trained on thousands of high-performing Instagram captions. Your niche and tone guide the output so every caption feels specific to you.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can I use these captions commercially?</button>
+        <div class="faq-a"><p>Absolutely. All captions generated are yours to use however you like — personal accounts, brand pages, client work, ads, you name it.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What makes Pro worth it?</button>
+        <div class="faq-a"><p>Pro removes all daily limits, adds 30 targeted hashtags per generation, saves your caption history for 90 days, lets you set a custom brand voice, and gets you 2× faster AI response times.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Do I need to create an account?</button>
+        <div class="faq-a"><p>No account needed for the Free plan — just type and generate. Accounts are only required for Pro to save your history and brand voice settings.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CTA BANNER
+  ══════════════════════════════════════════ -->
+  <section class="cta-banner reveal">
+    <div class="cta-orb" aria-hidden="true"></div>
+    <div class="cta-inner">
+      <h2>Start writing better captions<br /><span class="title-gradient">today — for free.</span></h2>
+      <p>Join 8,200+ creators. No sign-up. No credit card. Just great captions.</p>
+      <a href="#generator" class="hero-cta">
+        <span>Generate My Captions</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo"><span class="logo-icon">✦</span>Caption<span class="logo-accent">Craft</span></a>
+        <p>AI-powered captions for creators who mean business.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact</a>
+        <a href="#">Twitter</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 CaptionCraft. All rights reserved.</span>
+      <span>Built with GPT-4o ✦</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
